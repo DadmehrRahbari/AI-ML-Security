@@ -1,0 +1,16 @@
+Setup & Running the API
+1. Install dependencies
+pip install fastapi uvicorn onnxruntime
+
+2. Run the API
+
+python ai_model_security_api.py
+
+3. Test with cURL
+Upload a model:
+
+curl -X 'POST' 'http://127.0.0.1:8000/upload/' -F 'file=@model.onnx'
+
+4. Run inference:
+
+curl -X 'POST' 'http://127.0.0.1:8000/inference/?file_name=model.onnx'
